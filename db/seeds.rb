@@ -8,17 +8,6 @@
 
 require 'faker'
 Faker::Config.locale = :fr
-
-JoinTableStrollDog.destroy_all
-JoinTableStrollDog.reset_pk_sequence
-
-100.times do
-  JoinTableStrollDog.create!(
-  dog_id: rand(1..50),
-  stroll_id: rand(1..100),
-  )
-end
-
 City.destroy_all
 City.reset_pk_sequence
 
@@ -54,3 +43,16 @@ Stroll.reset_pk_sequence
   dogsitter_id: rand(1..50)
   )
 end
+
+JoinTableStrollDog.destroy_all
+JoinTableStrollDog.reset_pk_sequence
+
+100.times do
+  JoinTableStrollDog.create!(
+  dog_id: rand(1..50),
+  stroll_id: rand(1..100),
+  )
+end
+
+
+

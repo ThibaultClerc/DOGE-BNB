@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2020_07_30_204046) do
   create_table "strolls", force: :cascade do |t|
     t.datetime "date"
     t.integer "dogsitter_id"
-    t.integer "dog_id"
     t.integer "city_id"
+    t.integer "dog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_strolls_on_city_id"
